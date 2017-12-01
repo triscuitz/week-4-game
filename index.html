@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>StarWars | Fighting Game</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<body id="background">
+
+<header>
+  <img src="./assets/images/starWarsHead.png" alt="Star Wars" class="titleImage">
+  <h3 class="headline">The JQuery Fighting Game</h3>
+</header>
+
+<div class="container">
+  <div class="row">
+
+<!-- Selected Character -->
+    <div class="col-md-6">
+      <h4>Your Warrior!</h4>
+      <div class="row characters">
+          <div class="card" id="lukeWar" style="width: 24%;">
+            <img class="card-img-top" src="./assets/images/lukeSkywalker.png" alt="Luke">
+            <div class="card-body">
+              <p class="card-title">Luke</p>
+              <p id="lukeHealth">Health: 150</p>
+            </div>
+          </div>
+          <div class="card" id="bobaWar" style="width: 24%;">
+            <img class="card-img-top" src="./assets/images/backpacksGotJets.png" alt="Boba Fett">
+            <div class="card-body">
+              <p class="card-title">Boba Fett</p>
+              <p id="bobaHealth">Health: 180</p>
+            </div>
+          </div>
+          <div class="card" id="reyWar" style="width: 24%;">
+            <img class="card-img-top" src="./assets/images/reyDontKnow.png" alt="Rey">
+            <div class="card-body">
+              <p class="card-title">Rey</p>
+              <p id="reyHealth">Health: 100</p>
+            </div>
+          </div>
+          <div class="card" id="kyloWar" style="width: 24%;">
+            <img class="card-img-top" src="./assets/images/benSolo.png" alt="Kylo Ren">
+            <div class="card-body">
+              <p class="card-title">Kylo Ren</p>
+              <p id="kyloHealth">Health: 120</p>
+            </div>
+          </div>
+      </div>
+    </div>
+
+<!-- Selected Challenger -->
+    <div class="col-md-6">
+      <h4>Current Challenger!</h4>
+      <div class="row characters">
+          <div class="card initialChal" id="lukeChal" style="width: 24%;">
+            <img class="card-img-top" src="./assets/images/lukeSkywalker.png" alt="Luke">
+            <div class="card-body">
+              <p class="card-title">Luke</p>
+              <p id="lukeHealth">Health: 150</p>
+            </div>
+          </div>
+          <div class="card initialChal" id="bobaChal" style="width: 24%;">
+            <img class="card-img-top" src="./assets/images/backpacksGotJets.png" alt="Boba Fett">
+            <div class="card-body">
+              <p class="card-title">Boba Fett</p>
+              <p id="bobaHealth">Health: 180</p>
+            </div>
+          </div>
+          <div class="card initialChal" id="reyChal" style="width: 24%;">
+            <img class="card-img-top" src="./assets/images/reyDontKnow.png" alt="Rey">
+            <div class="card-body">
+              <p class="card-title">Rey</p>
+              <p id="reyHealth">Health: 100</p>
+            </div>
+          </div>
+          <div class="card initialChal" id="kyloChal" style="width: 24%;">
+            <img class="card-img-top" src="./assets/images/benSolo.png" alt="Kylo Ren">
+            <div class="card-body">
+              <p class="card-title">Kylo Ren</p>
+              <p id="kyloHealth">Health: 120</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Other Challengers -->
+  <div class="row">
+    <div class="col-md-6">
+        <h4>Challengers!</h4>
+        <div class="row characters">
+          <div class="card initialOther" id="lukeOther" style="width: 24%;">
+            <img class="card-img-top" src="./assets/images/lukeSkywalker.png" alt="Luke">
+            <div class="card-body">
+              <p class="card-title">Luke</p>
+              <p id="lukeHealth">Health: 150</p>
+            </div>
+          </div>
+          <div class="card initialOther" id="bobaOther" style="width: 24%;">
+            <img class="card-img-top" src="./assets/images/backpacksGotJets.png" alt="Boba Fett">
+            <div class="card-body">
+              <p class="card-title">Boba Fett</p>
+              <p id="bobaHealth">Health: 180</p>
+            </div>
+          </div>
+          <div class="card initialOther" id="reyOther" style="width: 24%;">
+            <img class="card-img-top" src="./assets/images/reyDontKnow.png" alt="Rey">
+            <div class="card-body">
+              <p class="card-title">Rey</p>
+              <p id="reyHealth">Health: 100</p>
+            </div>
+          </div>
+          <div class="card initialOther" id="kyloOther" style="width: 24%;">
+            <img class="card-img-top" src="./assets/images/benSolo.png" alt="Kylo Ren">
+            <div class="card-body">
+              <p class="card-title">Kylo Ren</p>
+              <p id="kyloHealth">Health: 120</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+      <h4>Battle!</h4>
+      <div class="row">
+        <div class="col-md-2">
+          <button type="button" class="btn btn-warning" id="attack">Attack!</button>
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-danger" id="retreat">Retreat!</button>
+        </div>
+        <div class="col-md-8 form-group">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<script src="./assets/javascript/game.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</body>
+</html>

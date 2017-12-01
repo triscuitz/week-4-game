@@ -1,0 +1,35 @@
+body {
+  background-color: black;
+}
+header {
+  text-align: center;
+}
+.titleImage {
+  width: 350px;
+}
+.headline {
+  color: yellow;
+}
+h4 {
+  color: yellow;
+}
+.card {
+  margin-right: 4px;
+}
+.card-title {
+  color: black;
+  margin-bottom: 0px;
+}
+.card-body {
+  padding-top: 0px;
+  padding-left: 5px;
+}
+.characters {
+  height: 75%;
+}
+.initialChal {
+  display: none;
+}
+.initialOther {
+  display: none;
+}
